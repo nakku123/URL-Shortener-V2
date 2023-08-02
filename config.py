@@ -38,7 +38,7 @@ LOG_CHANNEL = int(
     os.environ.get("LOG_CHANNEL", "-1001926079837")
 )  # log channel for information about users
 UPDATE_CHANNEL = os.environ.get(
-    "UPDATE_CHANNEL", False)  # For Force Subscription
+    "UPDATE_CHANNEL", True)  # For Force Subscription
 BROADCAST_AS_COPY = is_enabled(
     (os.environ.get("BROADCAST_AS_COPY", "False")), False
 )  # true if forward should be avoided
@@ -57,7 +57,7 @@ LINK_BYPASS = is_enabled(
 BASE_SITE = os.environ.get("BASE_SITE", "v2.kpslink.in")
 
 # For Admin use
-CHANNELS = is_enabled((os.environ.get("CHANNELS", "True")), True)
+CHANNELS = is_enabled((os.environ.get("CHANNELS", "False")), True)
 CHANNEL_ID = (
     [int(i.strip()) for i in os.environ.get("CHANNEL_ID").split(" ")]
     if os.environ.get("CHANNEL_ID")
